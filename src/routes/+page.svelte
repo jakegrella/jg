@@ -1,186 +1,164 @@
-<header>
-	<h1>Jake Grella</h1>
-	<button>Contact</button>
-</header>
-<div class="complete-content">
-	<nav>
-		<img
-			src="https://images.unsplash.com/profile-1597117444375-4f06a9b0a4ccimage?dpr=1&auto=format&fit=crop&w=150&h=150&q=60&crop=faces&bg=fff"
-			alt="Jake Grella"
-		/>
-		<div>
-			<h3>Experience</h3>
-			<ul>
-				<li><a href="?">Northwestern Mutual</a></li>
-				<li><a href="?">Contractor</a></li>
-			</ul>
-		</div>
-		<div>
-			<h3>Projects</h3>
-			<ul>
-				<li><a href="?">Cloud Computing Jobs</a></li>
-				<li><a href="?">Personal Site</a></li>
-			</ul>
-		</div>
-		<div>
-			<h3>About</h3>
-			<p>
-				Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
-				ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-			</p>
-		</div>
-	</nav>
-	<main>
-		<div class="main-header">
-			<div class="main-header-group">
-				<h3>Company</h3>
-				<p>Northwestern Mutual</p>
-			</div>
-			<div class="main-header-group">
-				<h3>When</h3>
-				<p>July 2021 - Current</p>
-			</div>
-		</div>
-		<div class="main-content">
-			<div class="main-content-content-group">
-				<div>
-					<h3>Summary</h3>
+<div class={`app light-theme`}>
+	<div class="layout">
+		<header>
+			<h1>Jake Grella</h1>
+		</header>
+		<main>
+			<div class="content">
+				<section class="gray">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit vulputate
-						felis, ac accumsan tellus posuere sit amet. Phasellus varius suscipit ullamcorper.
-						Aliquam erat volutpat. Pellentesque vel eros nec ante condimentum rutrum vel sit amet
-						diam. Sed erat elit, fringilla ut magna non, ultricies iaculis nisi. Donec et tellus
-						tristique ligula condimentum tincidunt ac at odio. Duis pulvinar dictum sollicitudin.
-						Praesent eget nisi in elit tempor egestas. Nam et orci rutrum, volutpat arcu nec,
-						posuere ipsum. Duis luctus nibh quis nulla euismod rutrum. Maecenas volutpat felis
-						lectus, sit amet tincidunt mauris bibendum vulputate.
+						// <a href="https://twitter.com/jakegrella" target="_blank" rel="noreferrer"
+							>@jakegrella</a
+						>,
+						<a href="mailto:jake@jakegrella.com" target="_blank" rel="noreferrer"
+							>jake@jakegrella.com</a
+						>
 					</p>
-				</div>
-				<div>
-					<h3>Journey</h3>
+					<p>
+						// <a href="https://github.com/jakegrella" target="_blank" rel="noreferrer">GitHub</a>,
+						<a href="https://linkedin.com/in/jakegrella" target="_blank" rel="noreferrer"
+							>LinkedIn</a
+						>
+					</p>
+				</section>
+				<section>
+					<h2>About</h2>
+					<p>
+						I'm a full stack web engineer with a desire to make a difference through my work. I
+						enjoy designing architectures and interfaces, and I take pride in my PRs.
+					</p>
+				</section>
+				<section>
+					<h2>Experience</h2>
 					<ul>
 						<li>
-							<div class="journey-info">
-								<p>Software Engineer</p>
-								<p>July 2022 - Current</p>
-							</div>
+							<p>Software Engineer</p>
+							<p>@ Northwestern Mutual (July 2021 - Today)</p>
+							<p class="gray">
+								Modernizing internal applications utilizing a microservice architecture
+							</p>
 						</li>
 						<li>
-							<div class="journey-info">
-								<p>Associate Software Engineer</p>
-								<p>July 2021 - July 2022</p>
-							</div>
+							<p>Software Developer</p>
+							<p>@ Contract (April 2021 - July 2021)</p>
+							<p class="gray">
+								Built frontend components used to onboard patients at clinics and practitioner
+								offices
+							</p>
 						</li>
 					</ul>
-				</div>
+				</section>
+				<section>
+					<h2>Projects</h2>
+					<ul>
+						<li>
+							<p>
+								Cloud Computing Jobs <span class="gray">// </span>
+								<a href="https://cloudcomputingjobs.com" target="_blank" rel="noreferrer">live</a>
+							</p>
+							<p class="gray">A job board for cloud engineers</p>
+						</li>
+						<li>
+							<p>
+								whalewatching.xyz <span class="gray">// </span>
+								<a href="https://whalewatching.xyz" target="_blank" rel="noreferrer">live</a>,
+								<a
+									href="https://github.com/jakegrella/whalewatching.xyz"
+									target="_blank"
+									rel="noreferrer">code</a
+								>
+							</p>
+							<p class="gray">
+								View the largest cryptocurrency transactions from a number of different blockchains
+							</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Skills</h2>
+					<p>AWS, React, JavaScript, SCSS, HTML</p>
+					<p>Node.js, TypeScript, REST, Prisma</p>
+					<p>Product Design, Branding, UI/UX</p>
+				</section>
 			</div>
-			<div class="main-content-image-group">
-				<img
-					src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-					alt=""
-					class="main-content-image"
-				/>
-				<img
-					src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-					alt=""
-					class="main-content-image"
-				/>
-				<img
-					src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-					alt=""
-					class="main-content-image"
-				/>
-				<img
-					src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
-					alt=""
-					class="main-content-image"
-				/>
-			</div>
-		</div>
-	</main>
+		</main>
+	</div>
 </div>
-<footer>
-	<nav class="footer-nav">
-		<ul>
-			<li><a href="github.com/jakegrella">GitHub</a></li>
-			<li><a href="github.com/jakegrella">LinkedIn</a></li>
-			<li><a href="github.com/jakegrella">Twitter</a></li>
-		</ul>
-	</nav>
-	<img
-		src="https://icons.iconarchive.com/icons/wikipedia/flags/256/US-United-States-Flag-icon.png"
-		alt="American flag"
-	/>
-</footer>
 
 <style>
-	header {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: center;
+	:global(body) {
+		background-color: #f6f0dd;
 	}
 
-	.complete-content {
-		display: flex;
-		flex-flow: row nowrap;
+	.layout {
+		margin: 0 auto;
+		padding: 3rem 1rem;
+		max-width: 25rem;
 	}
 
-	.main-header {
-		display: flex;
-		flex-flow: row nowrap;
+	.app {
+		font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+		font-size: 0.875rem;
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
-	.main-header-group {
-		margin-right: 2rem;
+	section {
+		margin-bottom: 1rem;
 	}
 
-	.main-content {
-		display: flex;
-		flex-flow: row nowrap;
+	h1 {
+		font-size: 1rem;
+		margin-bottom: 1rem;
 	}
 
-	.main-content-content-group {
-		flex-shrink: 2;
+	h2 {
+		font-size: 0.875rem;
+		font-weight: 800;
+		margin-bottom: 0.125rem;
 	}
 
-	.main-content-image-group {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
-	.main-content-image {
-		height: 10rem;
-		width: 15rem;
-		object-fit: cover;
-	}
-
-	.journey-info {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-	}
-
-	footer {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	footer img {
-		height: 2rem;
-		width: 2rem;
-		object-fit: contain;
-	}
-
-	.footer-nav ul {
-		list-style-type: none;
+	a {
 		text-decoration: none;
-		padding: 0;
 	}
 
-	.footer-nav ul > li {
-		display: inline-block;
+	ul {
+		padding: 0;
+		margin: 0;
 	}
+
+	li {
+		margin: 0 0 0.5rem 0;
+		list-style: none;
+	}
+
+	.light-theme {
+		background: #f6f0dd;
+	}
+
+	.light-theme a,
+	.light-theme.app,
+	.light-theme.gray {
+		color: #303e24;
+	}
+
+	.light-theme a:hover {
+		color: #68864e;
+	}
+
+	/* .dark-theme { */
+	/* background: #303e24; */
+	/* &.app, */
+	/* &.gray, */
+	/* h1, */
+	/* a { */
+	/* color: #f6f0dd; */
+	/* } */
+	/* h1:hover, */
+	/* a:hover { */
+	/* color: #86ac65; */
+	/* } */
+	/* } */
 </style>
