@@ -51,6 +51,11 @@
 						<p>
 							Cloud Computing Jobs <span class="gray">// </span>
 							<a href="https://cloudcomputingjobs.com" target="_blank" rel="noreferrer">live</a>
+							<a
+								href="https://github.com/jakegrella/cloud-computing-jobs"
+								target="_blank"
+								rel="noreferrer">code</a
+							>
 						</p>
 						<p class="gray">A job board for cloud engineers</p>
 					</li>
