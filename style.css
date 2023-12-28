@@ -1,5 +1,5 @@
 body {
-  background: #f2e8cf;
+  background: #F0F8EA;
 }
 
 .app {
@@ -7,9 +7,9 @@ body {
   margin: 0 auto;
   padding: 3rem 1rem;
   max-width: 25rem;
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+    sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -52,16 +52,16 @@ li {
 a,
 .gray,
 .app {
-  color: #100d04;
+  color: #161314;
 }
 
 a:hover {
-  color: #0995ec;
+  color: #FFE548;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #100d04;
+    background: #161314;
   }
 
   .app {
@@ -72,10 +72,10 @@ a:hover {
   .gray,
   h1,
   a {
-    color: #f2e8cf;
+    color: #F0F8EA;
   }
 
   a:hover {
-    color: #0995ec;
+    color: #FFE548;
   }
 }
