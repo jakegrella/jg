@@ -1,3 +1,9 @@
+---
+import Card from "../components/Card.astro";
+import "../styles/reset.css";
+import "../styles/global.css";
+---
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -24,212 +30,220 @@
         <h1>Jake Grella</h1>
       </header>
       <main>
-        <div class="content">
-          <section class="gray">
-            <p>
-              //
-              <a
-                href="https://twitter.com/jakegrella"
-                target="_blank"
-                rel="noreferrer">@jakegrella</a
-              >,
-              <a
-                href="mailto:jake@jakegrella.com"
-                target="_blank"
-                rel="noreferrer">jake@jakegrella.com</a
-              >
-            </p>
-            <p>
-              //
-              <a
-                href="https://github.com/jakegrella"
-                target="_blank"
-                rel="noreferrer">GitHub</a
-              >,
-              <a
-                href="https://linkedin.com/in/jakegrella"
-                target="_blank"
-                rel="noreferrer">LinkedIn</a
-              >
-            </p>
-          </section>
-          <section>
-            <h2>About</h2>
-            <p>
-              I'm a full stack web engineer that cares a lot about his work. I'm
-              also on a mission to enjoy my life and make a difference during
-              it. I'm increasingly interested in music.
-            </p>
-          </section>
-          <section>
-            <h2>Projects</h2>
-            <ul>
-              <li>
-                <p>
-                  Fish Farm Samples <span class="gray">// </span>
-                  <a
-                    href="https://fishfarmsamples.com"
-                    target="_blank"
-                    rel="noreferrer">live</a
-                  >
-                </p>
-                <p class="gray">Audio sample library and marketplace</p>
-              </li>
-              <li>
-                <p>
-                  Cloud Computing Jobs <span class="gray">// </span>
-                  <a
-                    href="https://cloudcomputingjobs.com"
-                    target="_blank"
-                    rel="noreferrer">live</a
-                  >,
-                  <a
-                    href="https://github.com/jakegrella/cloud-computing-jobs"
-                    target="_blank"
-                    rel="noreferrer">code</a
-                  >
-                </p>
-                <p class="gray">Job board for cloud engineers</p>
-              </li>
-              <li>
-                <p>
-                  Bryan Allen Lamb <span class="gray">// </span>
-                  <a
-                    href="https://bryanallenlamb.com"
-                    target="_blank"
-                    rel="noreferrer">live</a
-                  >
-                </p>
-                <p class="gray">Photography and videography portfolio</p>
-              </li>
-              <li>
-                <p>
-                  Stay Over <span class="gray">// </span>
-                  <a
-                    href="https://pleasestayover.com"
-                    target="_blank"
-                    rel="noreferrer">live</a
-                  >
-                </p>
-                <p class="gray">Artist's portfolio and webstore</p>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Experience</h2>
-            <ul>
-              <li>
-                <p>Software Engineer</p>
-                <p>@ Northwestern Mutual (July 2021 - Today)</p>
-                <p class="gray">
-                  Modernizing internal applications utilizing a microservice
-                  architecture
-                </p>
-              </li>
-              <li>
-                <p>Software Developer</p>
-                <p>@ Contract (April 2021 - July 2021)</p>
-                <p class="gray">
-                  Built frontend components used to onboard patients at clinics
-                  and practitioner offices
-                </p>
-              </li>
-            </ul>
-          </section>
-        </div>
+        <section>
+          <p>
+            Welcome to my small corner of the internet. I'd love use it to share
+            a few pieces of me with you.
+          </p>
+          <p>
+            I work as a software engineer. I've spent the last three years at
+            Northwestern Mutual building Node.js microservices on top of AWS. I
+            really care a lot about my work and genuinely enjoy what I do.
+          </p>
+          <p>
+            I'm also on a mission to enjoy my life and make a difference during
+            it. In my free time I still spend a bunch of time coding, but also
+            enjoy taking photos and traveling.
+          </p>
+          <p>
+            This site is a constant work in progress, so feel free to follow
+            along.
+          </p>
+        </section>
+        <section class="gray links">
+          <a
+            href="https://twitter.com/jakegrella"
+            target="_blank"
+            rel="noreferrer">@jakegrella</a
+          >
+          <a href="mailto:jake@jakegrella.com" target="_blank" rel="noreferrer"
+            >jake@jakegrella.com</a
+          >
+          <a
+            href="https://github.com/jakegrella"
+            target="_blank"
+            rel="noreferrer">GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/jakegrella"
+            target="_blank"
+            rel="noreferrer">LinkedIn</a
+          >
+        </section>
+        <section>
+          <h2>Projects</h2>
+          <Card
+            title="Fish Farm Samples"
+            description="Audio sample library and marketplace"
+            img={{
+              src: "./assets/fishfarmsamples.jpg",
+              alt: "Man holding drum equipment, silhouetted by sunset",
+            }}
+            tags={["Coding"]}
+            links={[
+              {
+                text: "Live",
+                url: "https://fishfarmsamples.com",
+              },
+            ]}
+          />
+          <Card
+            title="Cloud Computing Jobs"
+            description="Job board for cloud engineers"
+            img={{
+              src: "./assets/cloudcomputingjobs.jpg",
+              alt: "Screenshot of website showing map interface",
+            }}
+            tags={["Coding"]}
+            links={[
+              {
+                text: "Code",
+                url: "https://github.com/jakegrella/cloud-computing-jobs",
+              },
+              {
+                text: "Live",
+                url: "https://cloudcomputingjobs.com",
+              },
+            ]}
+          />
+          <Card
+            title="Bryan Allen Lamb"
+            description="Photography and videography portfolio"
+            img={{
+              src: "./assets/bryanallenlamb.jpg",
+              alt: "Screenshot of website",
+            }}
+            tags={["Coding"]}
+            links={[
+              {
+                text: "Live",
+                url: "https://bryanallenlamb.com",
+              },
+            ]}
+          />
+          <Card
+            title="Stay Over"
+            description="Artist's portfolio and webstore"
+            img={{
+              src: "./assets/stayover.jpg",
+              alt: "3D rendering of the words STAY OVER",
+            }}
+            tags={["Coding"]}
+            links={[
+              {
+                text: "Live",
+                url: "https://pleasestayover.com",
+              },
+            ]}
+          />
+        </section>
+        <section>
+          <h2>Work Experience</h2>
+          <Card
+            title="Software Engineer"
+            subtitle="Northwestern Mutual (July 2021 - Today)"
+            description="Modernizing internal applications utilizing a microservice architecture"
+          />
+          <Card
+            title="Software Developer"
+            subtitle="Contract (April 2021 - July 2021)"
+            description="Built frontend components used to onboard patients at clinics and practitioner offices"
+          />
+        </section>
       </main>
     </div>
   </body>
-</html>
-<style>
-  body {
-    background: #f0f8ea;
-  }
 
-  .app {
-    color-scheme: light;
-    margin: 0 auto;
-    padding: 3rem 1rem;
-    max-width: 25rem;
-    font-family:
-      "Helvetica Neue",
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      "Roboto",
-      "Oxygen",
-      "Ubuntu",
-      "Cantarell",
-      "Fira Sans",
-      "Droid Sans",
-      sans-serif;
-    font-size: 0.875rem;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  section {
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 0.875rem;
-    font-weight: 800;
-    margin-bottom: 0.125rem;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  p {
-    margin: 0.25rem 0;
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    margin: 0 0 0.5rem 0;
-    list-style: none;
-  }
-
-  a,
-  .gray,
-  .app {
-    color: #161314;
-  }
-
-  a:hover {
-    color: #ffe548;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: #161314;
-    }
-
+  <style>
     .app {
-      color-scheme: dark;
+      color-scheme: light;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      max-width: 30rem;
+      font-family:
+        "Helvetica Neue",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .app,
-    .gray,
-    h1,
+    section {
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 0.875rem;
+      font-weight: 800;
+      margin-bottom: 0.125rem;
+    }
+
     a {
-      color: #f0f8ea;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0.25rem 0;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 0 0 0.5rem 0;
+      list-style: none;
+    }
+
+    a,
+    .gray,
+    .app {
+      color: #161314;
     }
 
     a:hover {
       color: #ffe548;
     }
-  }
-</style>
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #161314;
+      }
+
+      .app {
+        color-scheme: dark;
+      }
+
+      .app,
+      .gray,
+      h1,
+      a {
+        color: #ffffff;
+      }
+
+      a:hover {
+        color: #ffe548;
+      }
+    }
+  </style>
+</html>

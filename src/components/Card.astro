@@ -1,0 +1,126 @@
+---
+type Link = {
+  text: string;
+  url: string;
+};
+
+type Props = {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  img?: { src: string; alt: string };
+  tags?: string[];
+  links?: Link[];
+};
+
+const { title, subtitle, description, img, tags, links } = Astro.props;
+console.log("img", img);
+---
+
+<div class="card">
+  {img && <img src={img.src} alt={img.alt} />}
+  <div class="info">
+    <div>
+      <h2>{title}</h2>
+      {subtitle && <h3>{subtitle}</h3>}
+      {description && <p>{description}</p>}
+    </div>
+    <div class="tag-link-container">
+      {
+        tags && (
+          <div class="tags-container">
+            {tags.map((tag) => (
+              <div class="tag">
+                <span class="tag-circle" />
+                <span>{tag}</span>
+              </div>
+            ))}
+          </div>
+        )
+      }
+      {
+        links && (
+          <div class="links-container">
+            {links.map((link) => (
+              <a class="link" href={link.url} target="_blank" rel="norefferrer">
+                {link.text}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    height: 7rem;
+    border-radius: 4px;
+    padding: 0.375rem;
+    margin: 0.25rem 0;
+    background: #fcfbf8;
+  }
+
+  .card img {
+    width: 30%;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 0.375rem;
+    max-height: min-content;
+  }
+
+  .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tag-link-container {
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .tags-container {
+    height: 100%;
+  }
+
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 0 0.625rem 0 0.5rem;
+    border-radius: 12px;
+    background: #fff0cb;
+  }
+
+  .tag-circle {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 8px;
+    background: #ffc629;
+  }
+
+  .links-container {
+    display: flex;
+    gap: 0.25rem;
+    height: 100%;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 0.5rem;
+    border-radius: 2px;
+    background: #ffc629;
+  }
+</style>
