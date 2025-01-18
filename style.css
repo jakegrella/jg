@@ -7,7 +7,6 @@ body {
 }
 
 .app {
-  /* position: relative; */
   color-scheme: light;
   margin: 0 auto;
   padding: 0rem 1rem 3rem;
@@ -24,20 +23,36 @@ body {
 .header {
   position: sticky;
   top: 0;
-  transform: translateY(-78%);
-  transition: transform 0.33s ease-in-out;
-  background: #3d3d3d;
-  padding: 1rem 1rem 0.5rem;
   display: flex;
   flex-direction: column-reverse;
-  border-radius: 16px;
-  margin-bottom: -180px;
 }
 
-.header > .header__top {
+.header__name {
+  background: #c1c1c1;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.header__content {
+  background: #c1c1c1;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.33s ease-in-out, height 0.33s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.menuButton path {
+  stroke: #000000;
+  transition: d 0.33s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  height: 200px;
+  padding: 0.5rem 1rem;
 }
 
 section {
@@ -100,5 +115,13 @@ a:hover {
 
   a:hover {
     color: #FFE548;
+  }
+
+  .header__name, .header__content {
+    background: #3d3d3d;
+  }
+
+  .menuButton path {
+    stroke: #FFFFFF;
   }
 }

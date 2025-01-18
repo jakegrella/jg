@@ -8,10 +8,9 @@
   <meta name="viewport" content="width=device-width" />
   <meta name="author" content="Jake Grella" />
   <title>Jake Grella</title>
-  <meta name="description" content="Software engineer with a passion for design, especially in real estate." />
+  <meta name="description" content="Software engineer with a passion for both digital and physical design." />
   <meta property="og:title" content="Jake Grella" />
-  <meta property="og:description"
-    content="Software engineer with a passion for design, especially in real estate." />
+  <meta property="og:description" content="Software engineer with a passion for both digital and physical design." />
   <meta property="og:url" content="https://jakegrella.com" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://jakegrella.com" />
@@ -21,31 +20,33 @@
 <body>
   <div class="app">
     <header id="headerCard" class="header">
-      <div class="header__top">
+      <div class="header__name">
         <h1>Jake Grella</h1>
-        <button id="menuButton">Open menu</button>
+        <svg id="menuButton" class="menuButton" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8L12 16L20 8" stroke="black" stroke-width="3" stroke-linecap="butt" stroke-linejoin="round" />
+        </svg>
       </div>
-      <p>
-        // @jakegrella ( <a href="https://x.com/jakegrella" target="_blank" rel="noreferrer">X</a> / <a
-          href="https://instagram.com/jakegrella" target="_blank" rel="noreferrer">Instagram</a> ),
-        <a href="mailto:jake@jakegrella.com" target="_blank" rel="noreferrer">jake@jakegrella.com</a>
-      </p>
-      <p>
-        //
-        <a href="https://github.com/jakegrella" target="_blank" rel="noreferrer">GitHub</a>,
-        <a href="https://linkedin.com/in/jakegrella" target="_blank" rel="noreferrer">LinkedIn</a>
-      </p>
-      <p>
-        I'm a full stack software engineer in the insurance industry, but I am also very interested in real estate. I have
-        always appreciated architecture and real estate, and I intend to spend more time creating projects around this
-        interest throughout 2025. I spend countless hours trying to make sure I live a fulfilled life and thinking about what
-        that actually means.
-      </p>
+      <div class="header__content" id="headerContent">
+        <p>
+          // @jakegrella ( <a href="https://x.com/jakegrella" target="_blank" rel="noreferrer">X</a> / <a
+            href="https://instagram.com/jakegrella" target="_blank" rel="noreferrer">Instagram</a> ),
+          <a href="mailto:jake@jakegrella.com" target="_blank" rel="noreferrer">jake@jakegrella.com</a>
+        </p>
+        <p>
+          //
+          <a href="https://github.com/jakegrella" target="_blank" rel="noreferrer">GitHub</a>,
+          <a href="https://linkedin.com/in/jakegrella" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p>
+          I'm a full stack software engineer working primarily in the JavaScript ecosystem. I spend countless hours trying to make sure I live a fulfilled life and thinking about what that actually means. Some of my favorite things include hiking, traveling, and business ideation.
+        </p>
+      </div>
     </header>
     <main>
       <div class="content">
         <section>
-          <h2>Projects</h2>
+          <h2>Recent Projects</h2>
           <ul>
             <li>
               <p>
@@ -61,13 +62,6 @@
               </p>
               <p class="gray">Photography and videography portfolio</p>
             </li>
-            <li>
-              <p>
-                Stay Over <span class="gray">// </span>
-                <a href="https://pleasestayover.com" target="_blank" rel="noreferrer">live</a>
-              </p>
-              <p class="gray">Artist's portfolio and webstore</p>
-            </li>
           </ul>
         </section>
         <section>
@@ -81,18 +75,11 @@
                 architecture
               </p>
             </li>
-            <li>
-              <p>Software Developer</p>
-              <p>@ Contract (April 2021 - July 2021)</p>
-              <p class="gray">
-                Built frontend components used to onboard patients at clinics
-                and practitioner offices
-              </p>
-            </li>
           </ul>
         </section>
       </div>
     </main>
   </div>
 </body>
+
 </html>
