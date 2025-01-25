@@ -19,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} antialiased mx-4`}>
+        <header className="bg-zinc-800 mb-4 px-6 py-4 rounded-b-lg">
+          <h1>Jake Grella</h1>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
