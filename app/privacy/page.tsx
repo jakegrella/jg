@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 max-w-3xl my-0 mx-auto">
       <p>
         Jake Grella (“we,” “our,” or “us”) is committed to protecting your
         privacy. This Privacy Policy explains how we collect, use, disclose, and

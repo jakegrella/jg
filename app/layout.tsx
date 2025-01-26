@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} antialiased mx-4`}>
         <main>{children}</main>
         <footer className="flex items-baseline gap-4 my-8">
-          <span>©Jake Grella</span>
+          <span>© {new Date().getFullYear()} Jake Grella</span>
           <nav>
             <ul>
               <li>
