@@ -6,20 +6,24 @@ type HeaderProps = {
 };
 
 const Header = ({ landing, pageTitle }: HeaderProps) => {
-  return (
-    <header className="flex items-center gap-4 bg-zinc-800 mb-4 px-6 py-4 rounded-b-lg">
-      {landing ? (
+  if (landing) {
+    return (
+      <header className="flex items-center gap-2 py-4">
         <Link href="/">
-          <h1>Jake Grella</h1>
+          <span className="text-[1rem]">Jake Grella</span>
         </Link>
-      ) : (
-        <>
-          <Link href="/">
-            <span className="text-xl">Jake Grella</span>
-          </Link>
-          <h1>{pageTitle}</h1>
-        </>
-      )}
+        <hr className="grow" />
+        <button>Menu</button>
+      </header>
+    );
+  }
+
+  return (
+    <header className="flex items-center gap-4 mb-4 py-4 rounded-b-lg">
+      <Link href="/">
+        <span className="text-xl">Jake Grella</span>
+      </Link>
+      <h1>{pageTitle}</h1>
     </header>
   );
 };
