@@ -15,20 +15,26 @@ body {
 
 h1 {
   font-size: 1rem;
-  line-height: 1.75rem
+  line-height: 1.25rem
 }
 
 h2 {
   font-size: 1rem;
-  line-height: 1.75rem;
+  line-height: 1.25rem;
+  margin: 2px 0 8px;
 }
 
 h3 {
-  font-size: 1rem;
-  line-height: 1.75rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #7C7B74;
 }
 
 p, li, span {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
