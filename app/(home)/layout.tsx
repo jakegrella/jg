@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Jake Grella",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -21,7 +21,7 @@ export default function RootLayout({
           loop
           className="absolute z-[-1] top-0 left-0 h-screen object-cover"
         >
-          <source src="./video.mp4" type="video/mp4" />
+          <source src="/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <button className="absolute bottom-4 right-4">audio: off</button>

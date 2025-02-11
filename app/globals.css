@@ -30,7 +30,7 @@ h3 {
   color: #7C7B74;
 }
 
-p, li, span {
+p, li, span, label {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }

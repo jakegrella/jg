@@ -1,8 +1,9 @@
 import Link from "next/link";
 import CTAButton from "../components/CTAButton";
-// import Image from "next/image";
+import Image from "next/image";
+import ContactForm from "../components/ContactForm";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex flex-col gap-12 pt-8">
       <h1>Jake Grella</h1>
@@ -114,12 +115,20 @@ export default function Home() {
         </p>
         <p>
           {`That's enough about me. If you think I can help you in any way or you
-          just want to chat, please don't hesitate to reach out. I'd love to
-          connect and hear your story.`}
+          just want to chat, please don't hesitate to reach out below or directly
+          via phone or email. I'd love to connect and hear your story.`}
         </p>
         <p>{`Hope to see you around,`}</p>
-        <p>{`Jake`}</p>
+        <Image
+          src="/signature.png"
+          alt="Jake signature"
+          width={64}
+          height={115}
+          className="-translate-x-2.5"
+        />
+        <p className="-translate-y-4">{`Jake`}</p>
       </section>
+      <ContactForm />
     </div>
   );
 }
