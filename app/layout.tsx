@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./Footer";
+import Header from "./Header";
+import ThemeProvider from "./ThemeProvider";
 
-const eurostile = localFont({ src: "./eurostile.ttf", display: "swap" });
+const openingHoursSans = localFont({
+  src: "./OpeningHoursSans-Regular.otf",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Jake Grella",
@@ -17,9 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${eurostile.className} tracking-wide antialiased mx-4`}>
-        <main>{children}</main>
-        <Footer />
+      <body
+        className={`${openingHoursSans.className} uppercase antialiased mx-4 flex flex-col justify-between min-h-screen`}
+      >
+        <ThemeProvider>
+          <Header />
+          <main className="grow">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

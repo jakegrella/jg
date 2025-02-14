@@ -1,29 +1,35 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 type HeaderProps = {
-  landing?: boolean;
   pageTitle?: string;
 };
 
-const Header = ({ landing, pageTitle }: HeaderProps) => {
-  if (landing) {
+const Header = ({ pageTitle }: HeaderProps) => {
+  const pathname = usePathname();
+
+  if (pathname === "/") {
     return (
-      <header className="flex items-center gap-2 py-4">
+      <header className="flex items-center gap-2 py-4 justify-between">
         <Link href="/">
-          <span className="text-[1rem]">Jake Grella</span>
+          <h1 className="text-[1rem]">Jake Grella</h1>
         </Link>
-        <hr className="grow" />
-        <button>Menu</button>
+        <button>310.123.4567</button>
       </header>
     );
   }
 
   return (
     <header className="flex items-center gap-4 mb-4 py-4 rounded-b-lg">
-      <Link href="/">
-        <span className="text-xl">Jake Grella</span>
-      </Link>
-      <h1>{pageTitle}</h1>
+      <>
+        <Link href="/">
+          <span className="text-xl">Jake Grella</span>
+        </Link>
+        <h1>{pageTitle}</h1>
+      </>
+      <button>310.123.4567</button>
     </header>
   );
 };

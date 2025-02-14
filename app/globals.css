@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 :root {
+  --background: #eeeeec;
+  --foreground: #000000;
+}
+
+[data-theme="dark"] {
   --background: #000000;
   --foreground: #eeeeec;
 }
@@ -32,9 +37,5 @@ h3 {
 
 p, li, span, label {
   font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-p {
-  margin-bottom: 1rem;
+  line-height: 1.125rem;
 }
