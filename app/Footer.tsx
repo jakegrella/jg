@@ -1,7 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { Geist_Mono } from "next/font/google";
 import useThemeStore from "./store";
+
+const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 const Footer = () => {
   const { theme, setTheme } = useThemeStore();
@@ -9,9 +12,7 @@ const Footer = () => {
   const ThemeButton = ({ text }: { text: "light" | "dark" | "system" }) => {
     return (
       <button
-        className={
-          theme === text.toLowerCase() ? "underline uppercase" : "uppercase"
-        }
+        className={theme === text.toLowerCase() ? "underline" : ""}
         onClick={() => {
           setTheme(text);
         }}
@@ -22,7 +23,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="flex flex-col gap-8 my-8">
+    <footer
+      className={`${geistMono.className} font-light lowercase flex flex-col gap-8 my-8`}
+    >
       <div className="flex items-baseline gap-2 w-fit">
         <p>theme:</p>
         <ThemeButton text="light" />

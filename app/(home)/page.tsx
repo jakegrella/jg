@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <main className="max-w-screen-md my-0 mx-auto grow flex flex-col gap-4 pt-8">
       {/* <Image src='./headshot' alt='headshot of real estate agent Jake Grella' /> */}
-      <p>{`Hey neighbor,`}</p>
+      {/* <p>{`Hey neighbor,`}</p>
       <p>
         {`My name is Jake Grella and I'm a real estate agent in Los Angeles.
           I've always appreciated architecture—growing up in the Chicago suburbs
@@ -49,7 +49,7 @@ export default function Page() {
         height={115}
         className="-translate-x-2.5"
       />
-      <p className="-translate-y-8">{`Jake`}</p>
+      <p className="-translate-y-8">{`Jake`}</p> */}
     </main>
   );
 }

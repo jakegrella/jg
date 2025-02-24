@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "./Footer";
 import Header from "./Header";
 import ThemeProvider from "./ThemeProvider";
 
-const openingHoursSans = localFont({
-  src: "./OpeningHoursSans-Regular.otf",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "Jake Grella",
   description: "Jake Grella",
 };
+
+const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -23,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openingHoursSans.className} uppercase antialiased mx-4 flex flex-col justify-between min-h-screen`}
+        className={`${dmSans.className} antialiased mx-4 flex flex-col justify-between min-h-screen`}
       >
         <ThemeProvider>
           <Header />
