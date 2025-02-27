@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.className} antialiased px-4 flex flex-col justify-between min-h-svh border border-blue-500`}
+        className={`${dmSans.className} antialiased px-4 flex flex-col justify-between min-h-svh`}
       >
         <ThemeProvider>
           <Header />

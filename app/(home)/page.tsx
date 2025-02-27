@@ -2,7 +2,7 @@
 
 export default function Page() {
   return (
-    <main className="max-w-lg my-0 mx-auto grow flex flex-col items-center justify-center gap-4 border border-red-500">
+    <main className="max-w-lg my-0 mx-auto grow flex flex-col items-center justify-center gap-4">
       <p>
         I am a software engineer in Los Angeles, working toward my California
         real estate license. With a tech-driven, data-focused approach, I
