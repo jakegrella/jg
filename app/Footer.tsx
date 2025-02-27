@@ -14,7 +14,7 @@ const Footer = () => {
       <button
         className={
           theme === text.toLowerCase()
-            ? "capitalize underline decoration-primary decoration-2 underline-offset-2"
+            ? "capitalize underline decoration-primary decoration-2 underline-offset-4"
             : "capitalize"
         }
         onClick={() => {
