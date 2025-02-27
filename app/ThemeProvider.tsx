@@ -12,14 +12,30 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
     const root = window.document.documentElement;
 
-    const appliedTheme =
-      theme === "system"
-        ? window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light"
-        : theme;
+    const applyTheme = (theme: string) => {
+      const appliedTheme =
+        theme === "system"
+          ? window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+          : theme;
+      root.setAttribute("data-theme", appliedTheme);
+    };
 
-    root.setAttribute("data-theme", appliedTheme);
+    applyTheme(theme);
+
+    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
+      if (theme === "system") {
+        applyTheme(e.matches ? "dark" : "light");
+      }
+    };
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener("change", handleSystemThemeChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleSystemThemeChange);
+    };
   }, [theme]);
 
   if (!mounted) return null;
