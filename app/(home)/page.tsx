@@ -1,8 +1,28 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="max-w-screen-md my-0 mx-auto grow flex flex-col gap-4 pt-8">
+    <main className="max-w-lg my-0 mx-auto grow flex flex-col items-center justify-center gap-4 py-4">
+      <p>
+        I am a software engineer in Los Angeles, working toward my California
+        real estate license. With a tech-driven, data-focused approach, I
+        analyze market trends, optimize strategies, and provide clear guidance
+        to help you make informed real estate decisions. Beyond the numbers, I
+        care deeply about the communities I serve. Whether you are buying,
+        selling, or investing, my goal is to simplify the process and deliver
+        results.
+      </p>
+      {/* <p>
+        I am a software engineer working towards my CA real estate license. With
+        my tech background I plan to employ a data-driven approach to helping
+        clients navigate the market. My background also allows me to analyze
+        trends, optimize strategies, and provide clear, informed guidance,
+        ensuring you make the best possible real estate decisions. Beyond the
+        numbers, I care deeply about the communities I serve. Whether you are
+        buying, selling, or investing, my goal is to simplify the process,
+        advocate for your best interests, and deliver results. Let me find the
+        right place for you.
+      </p> */}
       {/* <Image src='./headshot' alt='headshot of real estate agent Jake Grella' /> */}
       {/* <p>{`Hey neighbor,`}</p>
       <p>

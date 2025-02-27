@@ -24,7 +24,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Header />
-          <main className="grow">{children}</main>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>
