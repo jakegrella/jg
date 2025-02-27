@@ -1,25 +1,51 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { Geist_Mono } from "next/font/google";
 import Link from "next/link";
 
 type HeaderProps = {
-  landing?: boolean;
   pageTitle?: string;
 };
 
-const Header = ({ landing, pageTitle }: HeaderProps) => {
-  return (
-    <header className="flex items-center gap-4 bg-zinc-800 mb-4 px-6 py-4 rounded-b-lg">
-      {landing ? (
+const geistMono = Geist_Mono({ subsets: ["latin"] });
+
+const Header = ({ pageTitle }: HeaderProps) => {
+  const pathname = usePathname();
+
+  const title = "Jake Grella";
+  const phone = "310.880.3185";
+
+  if (pathname === "/") {
+    return (
+      <header className="flex items-center gap-2 py-4 justify-between">
         <Link href="/">
-          <h1>Jake Grella</h1>
+          <h1 className="tracking-tighter">{title}</h1>
         </Link>
-      ) : (
-        <>
-          <Link href="/">
-            <span className="text-xl">Jake Grella</span>
-          </Link>
-          <h1>{pageTitle}</h1>
-        </>
-      )}
+        <a
+          href="tel:3108803185"
+          className={`${geistMono.className} font-light text-sm`}
+        >
+          {phone}
+        </a>
+      </header>
+    );
+  }
+
+  return (
+    <header className="flex items-center gap-4 mb-4 py-4 rounded-b-lg">
+      <>
+        <Link href="/">
+          <h2 className="tracking-tighter">{title}</h2>
+        </Link>
+        <h1>{pageTitle}</h1>
+      </>
+      <a
+        href="tel:3108803185"
+        className={`${geistMono.className} font-light text-sm`}
+      >
+        {phone}
+      </a>
     </header>
   );
 };

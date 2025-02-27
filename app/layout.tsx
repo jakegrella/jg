@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Footer from "./Footer";
+import Header from "./Header";
+import ThemeProvider from "./ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Jake Grella",
   description: "Jake Grella",
 };
+
+const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -20,21 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased mx-4`}>
-        <main>{children}</main>
-        <footer className="flex items-baseline gap-8 my-8">
-          <span>© {new Date().getFullYear()} Jake Grella</span>
-          <nav>
-            <ul className="flex gap-2">
-              <li>
-                <Link href="/privacy">Privacy</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </footer>
+      <body
+        className={`${dmSans.className} antialiased mx-4 flex flex-col justify-between min-h-screen`}
+      >
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
