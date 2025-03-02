@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-primary: #1e90ff;
+}
+
+@theme dark {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: #1e90ff;
+}
+
+[data-theme='dark'] {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.25rem;
+}
+
+h2 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 2px 0 8px;
+}
+
+h3 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #7c7b74;
+}
+
+p,
+a,
+button,
+li,
+span,
+label {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
