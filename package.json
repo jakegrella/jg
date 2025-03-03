@@ -20,6 +20,7 @@
     "@payloadcms/payload-cloud": "^3.25.0",
     "@payloadcms/richtext-lexical": "^3.25.0",
     "@tailwindcss/postcss": "^4.0.9",
+    "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
