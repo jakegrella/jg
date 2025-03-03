@@ -69,6 +69,7 @@ export interface Config {
     users: User;
     media: Media;
     'email-subscribers': EmailSubscriber;
+    visits: Visit;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -78,6 +79,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'email-subscribers': EmailSubscribersSelect<false> | EmailSubscribersSelect<true>;
+    visits: VisitsSelect<false> | VisitsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -162,6 +164,21 @@ export interface EmailSubscriber {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "visits".
+ */
+export interface Visit {
+  id: number;
+  sessionID: string;
+  ip: string;
+  visitedAt: string;
+  path: string;
+  userAgent?: string | null;
+  referrer?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -178,6 +195,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'email-subscribers';
         value: number | EmailSubscriber;
+      } | null)
+    | ({
+        relationTo: 'visits';
+        value: number | Visit;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -260,6 +281,20 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface EmailSubscribersSelect<T extends boolean = true> {
   email?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "visits_select".
+ */
+export interface VisitsSelect<T extends boolean = true> {
+  sessionID?: T;
+  ip?: T;
+  visitedAt?: T;
+  path?: T;
+  userAgent?: T;
+  referrer?: T;
   updatedAt?: T;
   createdAt?: T;
 }
