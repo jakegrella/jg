@@ -1,4 +1,5 @@
 import { vercelPostgresAdapter } from '@payloadcms/db-vercel-postgres'
+import { resendAdapter } from '@payloadcms/email-resend'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
@@ -21,16 +22,21 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, EmailSubscribers],
-  editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
-  typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
-  },
   db: vercelPostgresAdapter({
     pool: {
       connectionString: process.env.POSTGRES_URL || '',
     },
   }),
-  sharp,
+  editor: lexicalEditor(),
+  email: resendAdapter({
+    defaultFromAddress: 'jake@jakegrella.com',
+    defaultFromName: 'Jake Grella',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
   plugins: [payloadCloudPlugin()],
+  secret: process.env.PAYLOAD_SECRET || '',
+  sharp,
+  typescript: {
+    outputFile: path.resolve(dirname, 'payload-types.ts'),
+  },
 })
