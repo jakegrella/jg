@@ -2,15 +2,22 @@
 
 export default function Page() {
   return (
-    <main className="max-w-lg my-0 mx-auto grow flex flex-col items-center justify-center gap-4">
+    <main className="max-w-lg my-0 mx-auto grow flex flex-col items-center justify-center gap-4 text-pretty">
       <p>
-        I am a software engineer in Los Angeles, working toward my California
-        real estate license. With a tech-driven, data-focused approach, I
-        analyze market trends, optimize strategies, and provide clear guidance
-        to help you make informed real estate decisions. Beyond the numbers, I
-        care deeply about the communities I serve. Whether you are buying,
-        selling, or investing, my goal is to simplify the process and deliver
-        results.
+        I&apos;m a licensed California real estate agent and software engineer based in Los Angeles.
+        I take a tech-forward, data-driven approach to real estate — analyzing market trends,
+        optimizing strategy, and providing clear, honest guidance to help you make confident
+        decisions.
+      </p>
+      <p>
+        With a background in both corporate and freelance software development, I bring a modern
+        mindset to branding, marketing, and client experience. Whether you&apos;re buying, selling,
+        or investing, I simplify the process, communicate clearly, and always put your goals first.
+      </p>
+      <p>
+        I care deeply about the communities I serve and am actively building a real estate business
+        that blends smart strategy with genuine connection. This is just the beginning, and I&apos;m
+        excited to grow alongside the people I work with.
       </p>
       {/* <p>
         I am a software engineer working towards my CA real estate license. With
