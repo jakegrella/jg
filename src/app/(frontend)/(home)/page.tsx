@@ -4,10 +4,10 @@ export default function Page() {
   return (
     <main className="max-w-lg my-0 mx-auto grow flex flex-col items-center justify-center gap-4 text-pretty">
       <p>
-        I&apos;m a licensed California real estate agent and software engineer based in Los Angeles.
-        I take a tech-forward, data-driven approach to real estate — analyzing market trends,
-        optimizing strategy, and providing clear, honest guidance to help you make confident
-        decisions.
+        Hey Neighbor, I&apos;m Jake Grella — a real estate agent at Keller Williams Los Feliz and a
+        software engineer. I take a tech-forward, data-driven approach to real estate which means
+        analyzing market trends, optimizing strategy, and providing clear, honest guidance to help
+        you make confident decisions.
       </p>
       <p>
         With a background in both corporate and freelance software development, I bring a modern

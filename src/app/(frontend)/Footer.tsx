@@ -31,7 +31,7 @@ const Footer = async () => {
       </div>
       <div className="flex flex-col gap-2">
         <EmailSignUpForm />
-        <span>© {new Date().getFullYear()} Jake Grella</span>
+        <span>© {new Date().getFullYear()} Jake Grella - DRE 02254210</span>
       </div>
     </footer>
   );
