@@ -1,19 +1,22 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Geist_Mono } from 'next/font/google';
+import { Anonymous_Pro } from 'next/font/google';
 import Link from 'next/link';
 
 type HeaderProps = {
   pageTitle?: string;
 };
 
-const geistMono = Geist_Mono({ subsets: ['latin'] });
+const anonymousPro = Anonymous_Pro({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
 
 const Header = ({ pageTitle }: HeaderProps) => {
   const pathname = usePathname();
 
-  const title = 'Jake Grella';
+  const title = 'JAKE—GRELLA';
   const phone = '310.880.3185';
 
   if (pathname === '/') {
@@ -22,7 +25,7 @@ const Header = ({ pageTitle }: HeaderProps) => {
         <Link href="/">
           <h1 className="tracking-tighter">{title}</h1>
         </Link>
-        <a href="tel:3108803185" className={`${geistMono.className} font-light text-sm`}>
+        <a href="tel:3108803185" className={`${anonymousPro.className} font-light text-sm`}>
           {phone}
         </a>
       </header>
@@ -37,7 +40,7 @@ const Header = ({ pageTitle }: HeaderProps) => {
         </Link>
         <h1>{pageTitle}</h1>
       </>
-      <a href="tel:3108803185" className={`${geistMono.className} font-light text-sm`}>
+      <a href="tel:3108803185" className={`${anonymousPro.className} font-light text-sm`}>
         {phone}
       </a>
     </header>
