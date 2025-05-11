@@ -1,17 +1,12 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Anonymous_Pro } from 'next/font/google';
 import Link from 'next/link';
+import { anonymousPro, logoFont } from '@/fonts';
 
 type HeaderProps = {
   pageTitle?: string;
 };
-
-const anonymousPro = Anonymous_Pro({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 const Header = ({ pageTitle }: HeaderProps) => {
   const pathname = usePathname();
@@ -23,7 +18,7 @@ const Header = ({ pageTitle }: HeaderProps) => {
     return (
       <header className="flex items-center gap-2 py-4 justify-between">
         <Link href="/">
-          <h1 className="tracking-tighter">{title}</h1>
+          <h1 className={`${logoFont.className}`}>{title}</h1>
         </Link>
         <a href="tel:3108803185" className={`${anonymousPro.className} font-light text-sm`}>
           {phone}
