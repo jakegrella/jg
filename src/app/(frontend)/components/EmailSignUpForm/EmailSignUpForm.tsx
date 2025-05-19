@@ -20,7 +20,8 @@ const EmailSignUpForm = () => {
       await addEmailAction(email);
       setEmail('');
       setMessage('Thank you for subscribing.');
-    } catch {
+      setDisabled(false);
+    } catch (_error) {
       setDisabled(false);
       setMessage('Sorry, an error occurred.');
     }

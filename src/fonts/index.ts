@@ -1,4 +1,4 @@
-import { Anonymous_Pro } from 'next/font/google';
+import { Anonymous_Pro, Newsreader } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const anonymousPro = Anonymous_Pro({
@@ -9,4 +9,9 @@ export const anonymousPro = Anonymous_Pro({
 export const logoFont = localFont({
     src: './LogoFont.ttf',
     display: 'swap'
+});
+
+export const newsreader = Newsreader({
+    subsets: ['latin'],
+    display: 'swap',
 });

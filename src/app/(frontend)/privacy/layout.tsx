@@ -7,7 +7,7 @@ const PrivacyLayout = ({
 }>) => {
   return (
     <div>
-      <Header pageTitle="Privacy" />
+      <Header />
       {children}
     </div>
   );

@@ -7,7 +7,7 @@ const ContactLayout = ({
 }>) => {
   return (
     <div>
-      <Header pageTitle="Contact" />
+      <Header />
       {children}
     </div>
   );

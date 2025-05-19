@@ -7,9 +7,10 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import { Users } from './collections/Users'
-import { Media } from './collections/Media'
+import { BlogPosts } from './collections/BlogPosts'
 import { EmailSubscribers } from './collections/EmailSubscribers'
+import { Media } from './collections/Media'
+import { Users } from './collections/Users'
 import { Visits } from './collections/Visits'
 
 const filename = fileURLToPath(import.meta.url)
@@ -22,7 +23,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, EmailSubscribers, Visits],
+  collections: [Users, Media, EmailSubscribers, Visits, BlogPosts],
   db: vercelPostgresAdapter({
     pool: {
       connectionString: process.env.POSTGRES_URL || '',

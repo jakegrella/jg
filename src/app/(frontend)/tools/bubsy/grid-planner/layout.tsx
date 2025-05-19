@@ -7,7 +7,7 @@ const PrivacyLayout = ({
 }>) => {
   return (
     <div>
-      <Header pageTitle="Bubsy - Grid Planner" />
+      <Header />
       {children}
     </div>
   );
