@@ -19,6 +19,7 @@
     "@payloadcms/next": "3.33.0",
     "@payloadcms/payload-cloud": "3.33.0",
     "@payloadcms/richtext-lexical": "3.33.0",
+    "@payloadcms/storage-uploadthing": "3.33.0",
     "@phosphor-icons/react": "^2.1.8",
     "@tailwindcss/postcss": "4.0.9",
     "@vercel/analytics": "1.5.0",
