@@ -4,6 +4,7 @@ import { RichText } from '@payloadcms/richtext-lexical/react';
 import { getPayload } from 'payload';
 import BlogPostShareButtons from './BlogPostShareButtons';
 import { headers } from 'next/headers';
+import { notFound } from 'next/navigation';
 
 export default async function BlogPostPage() {
   const payload = await getPayload({ config });
@@ -15,12 +16,12 @@ export default async function BlogPostPage() {
     collection: 'blog-posts',
     depth: 1,
     where: {
-      slug: {
-        equals: slug,
-      },
+      slug: { equals: slug },
+      publishedStatus: { equals: 'published' },
     },
   });
   const blogPost = blogPosts.docs[0];
+  if (!blogPost) notFound();
 
   return (
     <main className="flex h-full grow justify-center items-center">

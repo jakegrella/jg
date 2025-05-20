@@ -1,6 +1,5 @@
 import { vercelPostgresAdapter } from '@payloadcms/db-vercel-postgres'
 import { resendAdapter } from '@payloadcms/email-resend'
-import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { uploadthingStorage } from '@payloadcms/storage-uploadthing'
 import path from 'path'
@@ -37,7 +36,6 @@ export default buildConfig({
     apiKey: process.env.RESEND_API_KEY || '',
   }),
   plugins: [
-    payloadCloudPlugin(),
     uploadthingStorage({
       collections: {
         media: true,
