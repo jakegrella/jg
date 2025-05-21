@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import config from '@payload-config';
 import Link from 'next/link';
 import { getPayload } from 'payload';
