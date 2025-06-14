@@ -31,9 +31,9 @@ const Footer = async () => {
       </div>
       <div className="flex flex-col gap-2">
         <EmailSignUpForm />
-        <a href="sms:1-310-880-3185" className="hover:underline">
+        {/* <a href="sms:1-310-880-3185" className="hover:underline">
           <span className="hidden md:inline">Text me at</span> 1-310-880-3185
-        </a>
+        </a> */}
         <span>© {new Date().getFullYear()} Jake Grella - DRE 02254210</span>
       </div>
     </footer>
