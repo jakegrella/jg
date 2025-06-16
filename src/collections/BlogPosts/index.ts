@@ -6,9 +6,9 @@ export const BlogPosts: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
-  hooks: {
-    // afterChange: [revalidatePublish]
-  },
+  // hooks: {
+  // afterChange: [revalidatePublish]
+  // },
   fields: [
     {
       name: 'title',
