@@ -8,11 +8,11 @@ export default async function BlogPage() {
 
     const blogPosts = await payload.find({
       collection: 'blog-posts',
-      where: {
-        publishedStatus: {
-          equals: 'published',
-        },
-      },
+      // where: {
+      // publishedStatus: {
+      //   equals: 'published',
+      // },
+      // },
       depth: 1,
     });
 
