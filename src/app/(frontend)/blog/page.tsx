@@ -28,8 +28,9 @@ export default async function BlogPage() {
     );
   } catch (error: any) {
     console.error('error:', error);
-    console.error('error.message', error?.message);
+    console.error('error.message', error.message);
     console.error('error string', JSON.stringify(error, null, 2));
+    console.error('error.cause', error.cause);
     return <p>Error loading blog posts.</p>;
   }
 }
