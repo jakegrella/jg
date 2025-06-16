@@ -7,7 +7,7 @@ export const BlogPosts: CollectionConfig = {
     useAsTitle: 'title',
   },
   hooks: {
-    afterChange: [revalidatePublish]
+    // afterChange: [revalidatePublish]
   },
   fields: [
     {
