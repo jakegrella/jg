@@ -26,8 +26,10 @@ export default async function BlogPage() {
         ))}
       </main>
     );
-  } catch (error) {
-    console.error('Error fetching blog posts:', error);
+  } catch (error: any) {
+    console.error('error:', error);
+    console.error('error.message', error?.message);
+    console.error('error string', JSON.stringify(error, null, 2));
     return <p>Error loading blog posts.</p>;
   }
 }
