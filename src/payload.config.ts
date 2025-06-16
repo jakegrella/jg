@@ -23,6 +23,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  serverURL: "https://jakegrella.com",
   collections: [Users, Media, EmailSubscribers, Visits, BlogPosts],
   db: vercelPostgresAdapter({
     pool: {
