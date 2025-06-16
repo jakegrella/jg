@@ -12,7 +12,7 @@ export const revalidatePublish: CollectionAfterChangeHook<BlogPost> = ({
     if (doc.publishedStatus === 'published') {
         const path = `/blog/${doc.slug}`
 
-        // payload.logger.info(`Revalidating path: ${path}`)
+        payload.logger.info(`Revalidating path: ${path}`)
 
         revalidatePath(path)
 
@@ -20,7 +20,7 @@ export const revalidatePublish: CollectionAfterChangeHook<BlogPost> = ({
         if (previousDoc.publishedStatus === 'published' && doc.publishedStatus !== 'published') {
             const oldPath = `/blog/${previousDoc.slug}`
 
-            // payload.logger.info(`Revalidating old path: ${oldPath}`)
+            payload.logger.info(`Revalidating old path: ${oldPath}`)
 
             revalidatePath(oldPath)
         }
