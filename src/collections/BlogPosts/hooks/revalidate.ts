@@ -14,7 +14,8 @@ export const revalidatePublish: CollectionAfterChangeHook<BlogPost> = ({
 
         payload.logger.info(`Revalidating path: ${path}`)
 
-        revalidatePath(path)
+        revalidatePath(path) // revalidate the specific blog post page
+        revalidatePath('/blog') // revalidate the main blog page to ensure it reflects the latest posts
 
         // if post was previously published and is now unpublished, revalidate the previous path
         if (previousDoc.publishedStatus === 'published' && doc.publishedStatus !== 'published') {
