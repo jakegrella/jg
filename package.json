@@ -4,29 +4,28 @@
   "description": "JG website",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
-    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
-    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
-    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
-    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
-    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
-    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
-    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+    "build": "NODE_OPTIONS=--no-deprecation next build",
+    "dev": "NODE_OPTIONS=--no-deprecation next dev",
+    "devsafe": "rm -rf .next && NODE_OPTIONS=--no-deprecation next dev",
+    "generate:importmap": "NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "NODE_OPTIONS=--no-deprecation payload generate:types",
+    "lint": "NODE_OPTIONS=--no-deprecation next lint",
+    "payload": "NODE_OPTIONS=--no-deprecation payload",
+    "start": "NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
-    "@payloadcms/db-vercel-postgres": "3.33.0",
-    "@payloadcms/email-resend": "3.33.0",
-    "@payloadcms/next": "3.33.0",
-    "@payloadcms/richtext-lexical": "3.33.0",
-    "@payloadcms/storage-uploadthing": "3.33.0",
+    "@payloadcms/db-vercel-postgres": "3.43.0",
+    "@payloadcms/email-resend": "3.43.0",
+    "@payloadcms/next": "3.43.0",
+    "@payloadcms/richtext-lexical": "3.43.0",
+    "@payloadcms/storage-uploadthing": "3.43.0",
     "@phosphor-icons/react": "^2.1.8",
     "@tailwindcss/postcss": "4.0.9",
     "@vercel/analytics": "1.5.0",
     "clsx": "2.1.1",
-    "cross-env": "7.0.3",
     "graphql": "16.10.0",
-    "next": "15.2.4",
-    "payload": "3.33.0",
+    "next": "15.3.3",
+    "payload": "3.43.0",
     "postcss": "8.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -45,6 +44,6 @@
     "typescript": "5.7.3"
   },
   "engines": {
-    "node": "^18.20.2 || >=20.9.0"
+    "node": "22.x"
   }
 }
