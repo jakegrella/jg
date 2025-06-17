@@ -9,23 +9,18 @@ export const revalidatePublish: CollectionAfterChangeHook<BlogPost> = ({
 }) => {
     if (context.disableRevalidate) return
 
-    if (doc.publishedStatus === 'published') {
-        const path = `/blog/${doc.slug}`
-
-        payload.logger.info(`Revalidating path: ${path}`)
-
-        revalidatePath(path) // revalidate the specific blog post page
-        revalidatePath('/blog') // revalidate the main blog page to ensure it reflects the latest posts
-
-        // if post was previously published and is now unpublished, revalidate the previous path
-        if (previousDoc.publishedStatus === 'published' && doc.publishedStatus !== 'published') {
-            const oldPath = `/blog/${previousDoc.slug}`
-
-            payload.logger.info(`Revalidating old path: ${oldPath}`)
-
-            revalidatePath(oldPath)
-        }
-        return doc
-
+    const revalidatePages = (paths: string[]) => {
+        paths.forEach((path) => {
+            payload.logger.info(`Revalidating path: ${path}`)
+            revalidatePath(path)
+        })
     }
+
+    // if the post is being published, revalidate the new path
+    if (doc.publishedStatus === 'published') revalidatePages([`/blog/${doc.slug}`, '/blog'])
+
+    // if post was previously published, revalidate the old path (only other option is draft)
+    else if (previousDoc.publishedStatus === 'published') revalidatePages([`/blog/${previousDoc.slug}`, '/blog'])
+
+    return doc
 }
