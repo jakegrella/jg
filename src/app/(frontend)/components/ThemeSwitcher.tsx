@@ -23,7 +23,7 @@ const ThemeSwitcher = () => {
   };
   return (
     <div className="flex items-baseline gap-2 w-fit">
-      <p>Theme:</p>
+      <p className="!mb-0">Theme:</p>
       <ThemeButton text="light" />
       <ThemeButton text="system" />
       <ThemeButton text="dark" />
