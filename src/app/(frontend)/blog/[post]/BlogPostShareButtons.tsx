@@ -9,7 +9,7 @@ const IconButton = ({ shareUrl, children }: { shareUrl: string; children: React.
       onClick={() => {
         window.open(shareUrl, '_blank');
       }}
-      className="p-2 bg-primary text-white rounded-2xl hover:bg-blue-600 hover:cursor-pointer"
+      className="p-2 bg-primary text-black rounded-2xl hover:opacity-60 hover:cursor-pointer"
     >
       {children}
     </button>

@@ -8,7 +8,7 @@
 @theme {
   --color-background: #ffffff;
   --color-foreground: #000000;
-  --color-primary: #1e90ff;
+  --color-primary: #ccff00;
 }
 
 @theme dark {
@@ -19,7 +19,7 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --primary: #1e90ff;
+  --primary: #ccff00;
 }
 
 [data-theme='dark'] {
@@ -34,14 +34,14 @@ body {
 }
 
 h1 {
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 1.25rem;
 }
 
 h2 {
   font-size: 1rem;
   line-height: 1.25rem;
-  margin: 2px 0 8px;
+  /* margin: 2px 0 8px; */
 }
 
 h3 {
@@ -68,4 +68,9 @@ label {
 
 p {
   margin-bottom: 0.75rem
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }

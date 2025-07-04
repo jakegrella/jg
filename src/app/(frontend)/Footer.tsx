@@ -1,21 +1,12 @@
-import Link from 'next/link';
-import { Geist_Mono } from 'next/font/google';
 import EmailSignUpForm from './components/EmailSignUpForm/EmailSignUpForm';
 import ThemeSwitcher from './components/ThemeSwitcher';
 
-const geistMono = Geist_Mono({ subsets: ['latin'] });
-
 const Footer = async () => {
-  // const visits = 0;
-
   return (
-    <footer
-      className={`${geistMono.className} font-light my-4 flex gap-6 flex-col md:flex-row-reverse md:justify-between md:items-end`}
-    >
-      <div className="flex flex-col gap-2 md:gap-4">
-        <ThemeSwitcher />
-        {/* <span>Visits: {visits}</span> */}
-        <nav>
+    <footer className="pt-4 flex flex-col gap-6 uppercase">
+      <ThemeSwitcher />
+      {/* <span>Visits: {visits}</span> */}
+      {/* <nav>
           <ul className="flex gap-4">
             <li>
               <Link href="/contact">Contact</Link>
@@ -27,15 +18,12 @@ const Footer = async () => {
               <Link href="/privacy">Privacy</Link>
             </li>
           </ul>
-        </nav>
-      </div>
-      <div className="flex flex-col gap-2">
-        <EmailSignUpForm />
-        {/* <a href="sms:1-310-880-3185" className="hover:underline">
-          <span className="hidden md:inline">Text me at</span> 1-310-880-3185
-        </a> */}
-        <span>© {new Date().getFullYear()} Jake Grella - DRE 02254210</span>
-      </div>
+        </nav> */}
+      <EmailSignUpForm />
+      <span>
+        © {new Date().getFullYear()} Jake Grella -{' '}
+        <a href="https://www2.dre.ca.gov/publicasp/pplinfo.asp?LICENSE_ID=02254210">DRE 02254210</a>
+      </span>
     </footer>
   );
 };

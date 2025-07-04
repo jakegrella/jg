@@ -37,7 +37,7 @@ const EmailSignUpForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className={clsx('p-2 border', disabled ? 'border-gray-300' : '')}
+          className={clsx('p-2 border uppercase', disabled ? 'border-gray-300' : '')}
           placeholder="Email"
           disabled={disabled}
         />
@@ -45,7 +45,7 @@ const EmailSignUpForm = () => {
           type="submit"
           className={clsx(
             disabled ? 'bg-gray-300' : 'bg-primary',
-            'text-white p-2 hover:cursor-pointer',
+            'text-black px-4 hover:cursor-pointer uppercase',
           )}
         >
           Subscribe

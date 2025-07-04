@@ -27,8 +27,8 @@ export default async function BlogPostPage() {
     <main className="flex h-full grow justify-center items-center">
       <article className="flex flex-col gap-8 max-w-3xl">
         <header>
-          <h1 className="text-2xl pb-0.5">{blogPost.title}</h1>
-          <h2 className="pb-1">{blogPost.subtitle}</h2>
+          <h1 className="text-2xl pb-0.5 text-pretty">{blogPost.title}</h1>
+          <h2 className="pb-1 text-pretty">{blogPost.subtitle}</h2>
           <div className="flex gap-4">
             <div>
               <h3 className={anonymousPro.className}>{blogPost.author}</h3>

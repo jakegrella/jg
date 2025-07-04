@@ -2,8 +2,6 @@ import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
-import Footer from './Footer';
-import Header from './Header';
 import ThemeProvider from './ThemeProvider';
 
 export const metadata: Metadata = {
@@ -23,11 +21,7 @@ export default function RootLayout({
       <body
         className={`${dmSans.className} antialiased px-4 flex flex-col justify-between min-h-svh`}
       >
-        <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
       </body>
     </html>

@@ -1,20 +1,18 @@
 import Link from 'next/link';
-import { anonymousPro, logoFont } from '@/fonts';
+import { logoFont } from '@/fonts';
 
 const Header = () => {
-  const title = 'JAKE—GRELLA';
-  const phone = '310.880.3185';
-
   return (
-    <header className="flex items-center gap-2 py-4 mb-4 justify-between">
-      <Link href="/">
-        <h1 className={`${logoFont.className} text-lg`}>{title}</h1>
+    <header className="flex justify-between items-start gap-2 pb-8 uppercase">
+      <Link href="/" className="flex items-center gap-2">
+        <div className="w-8 h-5 bg-[#ccff00]" />
+        <h1 className={`${logoFont.className}`}>JAKE GRELLA</h1>
       </Link>
-      <div className={`${anonymousPro.className} font-light text-sm flex gap-8`}>
-        <Link href={'/blog'}>Blog</Link>
-        <a href="tel:3108803185" className={`${anonymousPro.className} font-light text-sm`}>
-          {phone}
-        </a>
+      <div className="text-sm">
+        <div className="flex gap-4">
+          <a href="tel:1-310-880-3185">310.880.3185</a>
+        </div>
+        <a href="mailto:jake@jakegrella.com">jake@jakegrella.com</a>
       </div>
     </header>
   );

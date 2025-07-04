@@ -1,25 +1,28 @@
+import Link from 'next/link';
+
 export default function Page() {
   return (
-    <main className="w-full grow flex flex-col items-center justify-center gap-8 text-pretty">
-      <div className="max-w-lg">
-        <p>
-          Hey Neighbor, I&apos;m Jake Grella — a real estate agent at Keller Williams Los Feliz and
-          a software engineer. I take a tech-forward, data-driven approach to real estate which
-          means analyzing market trends, optimizing strategy, and providing clear, honest guidance
-          to help you make confident decisions.
-        </p>
-        <p>
-          With a background in both corporate and freelance software development, I bring a modern
-          mindset to branding, marketing, and client experience. Whether you&apos;re buying,
-          selling, or investing, I simplify the process, communicate clearly, and always put your
-          goals first.
-        </p>
-        <p>
-          I care deeply about the communities I serve and am actively building a real estate
-          business that blends smart strategy with genuine connection. This is just the beginning,
-          and I&apos;m excited to grow alongside the people I work with.
-        </p>
+    <main className="w-full grow flex flex-col gap-4 uppercase">
+      <div className="w-10 h-6 bg-[#ccff00]" />
+      <h1>Jake Grella</h1>
+      <h2>
+        Los Angeles, California <br />
+        Real Estate Agent
+      </h2>
+      <div>
+        <span className="flex gap-2">
+          <a href="sms:1-310-880-3185">Text</a>
+          <a href="tel:1-310-880-3185" className="flex gap-22">
+            <span>Call</span>
+            <span>310.880.3185</span>
+          </a>
+        </span>
+        <a href="mailto:jake@jakegrella.com" className="flex gap-8">
+          <span>Email</span>
+          <span>jake@jakegrella.com</span>
+        </a>
       </div>
+      <Link href="/blog">Blog</Link>
     </main>
   );
 }
