@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload';
 import { revalidatePublish } from './hooks/revalidate';
+import { sendEmailNotification } from './hooks/notify';
 
 export const BlogPosts: CollectionConfig = {
   slug: 'blog-posts',
@@ -7,7 +8,7 @@ export const BlogPosts: CollectionConfig = {
     useAsTitle: 'title',
   },
   hooks: {
-    afterChange: [revalidatePublish]
+    afterChange: [revalidatePublish, sendEmailNotification]
   },
   fields: [
     {
